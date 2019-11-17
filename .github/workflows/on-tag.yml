@@ -46,13 +46,10 @@ jobs:
           if [[ "${CPU}" == "arm64" ]]; then
             CPU="arm64v8"
           fi
-          sed -i ${DIR}/Dockerfile \
+          sed -i Dockerfile \
             -e "s|^FROM alpine|FROM $CPU/alpine|g"
       - name: Build ElectrumX
-        run: >
-          docker build  ${DIR}/
-          --build-arg "VERSION=${VERSION}"
-          --tag       electrumx
+        run: docker build . --build-arg "VERSION=${VERSION}" --tag electrumx
       - name: Print OS info
         run: docker run --rm  --entrypoint=uname  electrumx  -a
 
