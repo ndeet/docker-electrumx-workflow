@@ -56,7 +56,7 @@ jobs:
         run: docker run --rm  --entrypoint=uname  electrumx  -a
 
       - name: Print ElectrumX version
-        run: docker run --rm -it electrumx echo $SERVER_SUBVERSION
+        run: docker run --rm electrumx echo $SERVER_SUBVERSION
 
       - name: Save built image into a .tgz file
         run: |
