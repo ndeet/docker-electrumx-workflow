@@ -95,7 +95,7 @@ jobs:
       - name: Login to Docker Hub
         run: |
           echo "Logging in as ${DOCKER_USER}…"
-          echo "${{DOCKER_TOKEN}}" | docker login -u="${DOCKER_USER}" --password-stdin
+          echo "${{secrets.DOCKER_TOKEN}}" | docker login -u="${DOCKER_USER}" --password-stdin
       - name: Download all build artifacts
         uses: actions/download-artifact@v1.0.0
         with:
