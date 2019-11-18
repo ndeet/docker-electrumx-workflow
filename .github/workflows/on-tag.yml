@@ -136,7 +136,6 @@ jobs:
         uses: meeDamian/sync-readme@v1.0.5
         with:
           pass: ${{secrets.DOCKER_TOKEN}}
-          description: Run an Electrum server with one command
 
       - name: Upload images to Github Release
         uses: meeDamian/github-release@v1.0.1
