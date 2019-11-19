@@ -137,7 +137,7 @@ jobs:
         with:
           pass: ${{secrets.DOCKER_TOKEN}}
           slug: ndeet/electrumx-workflow
-          description: true
+          description: "my description: ${SLUG}"
 
       - name: Upload images to Github Release
         uses: meeDamian/github-release@v1.0.1
