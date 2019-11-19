@@ -136,7 +136,6 @@ jobs:
         uses: meeDamian/sync-readme@v1.0.5
         with:
           pass: ${{secrets.DOCKER_TOKEN}}
-          slug: ndeet/electrumx-workflow
           description: "my description: ${SLUG}"
 
       - name: Upload images to Github Release
